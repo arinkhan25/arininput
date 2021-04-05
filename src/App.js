@@ -9,7 +9,7 @@ class App extends Component  {
       <div className="container">
         <ul className="cards">
           <TextInput />
-          <DateInput />
+          <DateInput onClick={this.date}/>
           <li className="NumberInput cards-item">
             <div className="card">
               <div className="card-content">
@@ -32,7 +32,9 @@ class App extends Component  {
                 <div className="card-title">Button</div>
                 <p className="card-text">
                   <div className="input btn-block">
-                    <input type="button" value="Click me!" className="btn"/>
+                    <input type="button" value="Click me!" className="btn" onClick={() => {
+            this.setState({ clicked: true })
+          }}/>
                   </div>
                   <div className="output">
                     <label for="buttonOutput">State: </label>
@@ -69,7 +71,7 @@ class App extends Component  {
                 <div className="card-title">Color</div>
                 <p className="card-text">
                   <div className="input btn-block">
-                    <input type="color" className="colorButton"/>
+                    <input type="color" className="colorButton" this.setSpan();/>
                   </div>
                   <div className="output" >
                     <label for="colorOutput">State: </label>
